@@ -1,4 +1,4 @@
-# StepInStyle - E-commerce Shoe Shopping Website
+# StepInStyle - E-commerce Website
 
 ### Table of Contents
 1. [Project Overview](#project-overview)
