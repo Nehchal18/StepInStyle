@@ -96,3 +96,31 @@
 .link:hover{
     opacity: 1;
 }
+
+@media screen and (max-width: 790px){
+
+    .nav-items{
+        display: none;
+    }
+    .nav{
+        padding: 10px 5vw;
+    }
+
+    .search{
+        width: 300px;
+    }
+
+    .search-box{
+        width: 70%;
+    }
+
+    .search-btn{
+        width: 30%;
+    }
+
+    .links-container{
+        display: none;
+        /* padding: 10px 5vw; */
+    }
+    
+}

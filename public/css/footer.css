@@ -85,3 +85,29 @@ footer{
     color: #fff;
     background: rgba(0, 0, 0, 0.2);
 }
+
+@media screen and (max-width: 790px){
+    .footer-content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-ul-container{
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .category{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .category-title{
+        grid-column: span 1;
+    }
+
+    .footer-social-container{
+        margin-top: 20px;
+    }
+    
+}

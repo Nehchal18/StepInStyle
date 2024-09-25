@@ -201,3 +201,45 @@
     grid-column: span 2;
     margin-bottom: 10px;
 }
+
+@media screen and (max-width: 790px){
+    .product-card{
+        width: 200px;
+        height: 400px;
+        margin-right: 20px;
+    }
+
+    .product-image{
+        height: 300px;
+    }
+
+    .product-info{
+        height: 80px;
+    }
+
+    .product-brand{
+        font-size: 15px;
+    }
+
+    .product-short-des{
+        font-size: 15px;
+    }
+
+    .price{
+        font-size: 15px;
+    }
+
+    .actual-price{
+        font-size: 15px;
+    }
+
+    .card-btn{
+        padding: 5px;
+        font-size: 15px;
+    }
+
+    .collection p{
+        font-size: 30px;
+    }
+    
+}

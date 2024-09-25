@@ -12,7 +12,7 @@ const notification = document.querySelector('#notification');
 submitBtn.addEventListener('click', () => {
     if(name.value.length < 3){
         showAlert('name must be 3 letters long');
-    } else if(!email.value.length){
+    } else if(!validateEmail(email.value)){
         showAlert('enter your email');
     } else if(password.value.length < 8){
         showAlert('password should be 8 letters long');
@@ -25,15 +25,21 @@ submitBtn.addEventListener('click', () => {
     } else{
         // submit form
         loader.style.display = 'block';
-        sendData('/signup', {
+        saveToLocal({
             name: name.value,
             email: email.value,
             password: password.value,
             number: number.value,
             tac: tac.checked,
             notification: notification.checked,
-            seller: false
-        })
+            seller: false  // Assuming this is a user signup
+        });
+
+        // Hide loader after saving
+        setTimeout(() => {
+            loader.style.display = 'none';
+            showAlert('Data saved successfully!');
+        }, 1000);
     }
 })
 
@@ -66,4 +72,9 @@ const showAlert = (msg) => {
     setTimeout(() => {
         alertBox.classList.remove('show');
     }, 3000);
+}
+
+const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
 }
