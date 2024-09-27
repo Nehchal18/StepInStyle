@@ -1,16 +1,23 @@
 const loader = document.querySelector('.loader');
 
+const currentUsername = localStorage.getItem("currentUser");
+
+if (currentUsername) {
+    window.location.href = 'index.html';
+}
+
 // select inputs 
 const submitBtn = document.querySelector('.submit-btn');
-const name = document.querySelector('#name');
+const username = document.querySelector('#name');
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 const number = document.querySelector('#number');
 const tac = document.querySelector('#terms-and-cond');
 const notification = document.querySelector('#notification');
 
+
 submitBtn.addEventListener('click', () => {
-    if(name.value.length < 3){
+    if(username.value.length < 3){
         showAlert('name must be 3 letters long');
     } else if(!validateEmail(email.value)){
         showAlert('enter your email');
@@ -25,43 +32,25 @@ submitBtn.addEventListener('click', () => {
     } else{
         // submit form
         loader.style.display = 'block';
-        saveToLocal({
-            name: name.value,
-            email: email.value,
-            password: password.value,
-            number: number.value,
-            tac: tac.checked,
-            notification: notification.checked,
-            seller: false  // Assuming this is a user signup
-        });
+        // console.log(username.value, password.value, email.value, number.value);
 
+        const newUser = new User(username.value, password.value, email.value, number.value);
         // Hide loader after saving
-        setTimeout(() => {
-            loader.style.display = 'none';
-            showAlert('Data saved successfully!');
-        }, 1000);
+        if (User.saveUser(newUser)) {
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 1000);
+            User.setCurrentUser(username.value);
+            console.log(`Logged in as: ${username.value}`);
+            window.location.href = "index.html";
+        } else {
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 1000);
+            showAlert("User already exists. Please choose a different username or Signin.");
+        }
     }
-})
-
-// send data function
-const sendData = (path, data) => {
-    fetch(path, {
-        method: 'post',
-        headers: new Headers({'Content-Type': 'application/json'}),
-        body: JSON.stringify(data)
-    }).then((res) => res.json())
-    .then(response => {
-        processData(response);
-    })
-}
-
-const processData = (data) => {
-    loader.style.display = null;
-    if(data.alert){
-        showAlert(data.alert);
-    }
-}
-
+});
 
 // alert function
 const showAlert = (msg) => {

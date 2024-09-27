@@ -15,7 +15,7 @@
 }
 
 .nav{
-    padding: 10px 10vw;
+    padding: 10px 5vw;
     display: flex;
     justify-content: space-between;
 }
@@ -29,8 +29,28 @@
     align-items: center;
 }
 
+.nav span{
+    font-size: 20px;
+    color: #383838;
+    text-transform: capitalize;
+    margin-left: 10px;
+}
+
+.nav .n-button{
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #383838;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
 .search{
-    width: 500px;
+    width: 400px;
     display: flex;
 }
 
@@ -95,6 +115,10 @@
 
 .link:hover{
     opacity: 1;
+}
+
+.nope{
+    display: none;
 }
 
 @media screen and (max-width: 790px){

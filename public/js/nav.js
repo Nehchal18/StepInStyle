@@ -9,8 +9,11 @@ const createNav = () => {
                     <input type="text" class="search-box" placeholder="search brand, product">
                     <button class="search-btn">search</button>
                 </div>
-                <a href="#"><img src="img/user.png" alt=""></a>
-                <a href="cart.html"><img src="img/cart.png" alt=""></a>
+                <span class ="welcome nope"id="welcome-user">Hi , User</span>
+                <button class="n-button logout nope" id="logout-button">Logout</button>
+                <button href="login.html" class=" n-button login nope">login</button>
+                <button href="signup.html" class=" n-button signup nope">signup</button>
+                <a class="cart nope" href="cart.html"><img src="img/cart.png" alt=""></a>
             </div>
         </div>
         <ul class="links-container">
@@ -24,3 +27,20 @@ const createNav = () => {
 }
 
 createNav();
+if(localStorage.getItem("currentUser")){
+    document.querySelector('.welcome').classList.remove('nope');
+    document.querySelector('.logout').classList.remove('nope');
+    document.querySelector('.cart').classList.remove('nope');
+    document.querySelector('.login').classList.add('nope');
+    document.querySelector('.signup').classList.add('nope');
+    document.querySelector('.welcome').innerHTML = `Hi, ${localStorage.getItem("currentUser")}`;
+    document.querySelector('.logout').addEventListener('click',()=>{
+        localStorage.removeItem("currentUser");
+        window.location.href = "login.html";
+    })
+}else{
+    document.querySelector('.welcome').classList.add('nope');
+    document.querySelector('.logout').classList.add('nope');
+    document.querySelector('.login').classList.remove('nope');
+    document.querySelector('.signup').classList.remove('nope');
+}
