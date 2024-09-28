@@ -9,7 +9,7 @@ function renderProducts() {
             
             // Create the product card HTML
             const productCard = `
-                <div class="product-card" data-id="{id}">
+                <div class="product-card" data-id="${id}">
                     <div class="product-image">
                         <span class="discount-tag">50% off</span>
                         <img src="${product.img[0]}" class="product-thumb" alt="${product.name}">
@@ -33,6 +33,7 @@ function renderProducts() {
                 // Set the current product ID in localStorage
                 localStorage.setItem('current_product', productId);
                 console.log(`Current product set to: ${productId}`);
+                window.location.href = 'product.html';
             });
         });
     });

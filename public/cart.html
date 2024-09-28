@@ -9,10 +9,23 @@
         />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Clothing - Best Apparels Online Store</title>
+        <link rel="stylesheet" href="css/cart.css" />
         <link rel="stylesheet" href="css/home.css" />
+
     </head>
     <body> 
         <nav class="navbar"></nav>
+        
+        <section class="cart-section">
+            <h2 class="product-category">Your Shopping Cart</h2>
+            <div class="cart-container">
+                <!-- Cart items will be rendered here dynamically -->
+            </div>
+            <div class="cart-summary">
+                <h3>Total: <span class="total-price">$0</span></h3>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </section>
 
         <footer></footer>
          
@@ -21,5 +34,6 @@
         <script src="js/footer.js"></script>
         <script src="js/product.js"></script>
         <script src="js/cart.js"></script>
+        <script src="js/data.js"></script>
     </body>
 </html>
