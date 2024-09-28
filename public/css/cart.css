@@ -52,7 +52,7 @@
 }
 
 .quantity-btn {
-    background-color: #ff7d7d;
+    background-color: #383838;
     color: white;
     border: none;
     border-radius: 5px;
@@ -63,7 +63,7 @@
 }
 
 .remove-btn {
-    background-color: #ff7d7d;
+    background-color: #383838;
     color: white;
     border: none;
     border-radius: 5px;
@@ -79,7 +79,7 @@
 
 .checkout-btn {
     padding: 10px 20px;
-    background-color: #ff7d7d;
+    background-color: #383838;
     color: white;
     border: none;
     border-radius: 5px;
