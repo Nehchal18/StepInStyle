@@ -3,7 +3,7 @@ const createNav = () => {
 
     nav.innerHTML = `
         <div class="nav">
-            <img src="img/dark-logo.png" class="brand-logo" alt="">
+            <img src="img/stepinstyle-high-resolution-logo-transparent.png" class="brand-logo" alt="">
             <div class="nav-items">
                 <div class="search">
                     <input type="text" class="search-box" placeholder="search brand, product">

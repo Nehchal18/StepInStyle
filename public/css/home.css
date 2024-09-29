@@ -12,17 +12,18 @@
 }
 
 .hero-section .logo{
-    height: 150px;
+    /* height: 150px; */
+    width: 350px;
     display: block;
     margin: auto;
 }
 
 .hero-section .sub-heading{
-    margin-top: 10px;
+    margin-top: 15px;
     text-align: center;
     color: #fff;
     text-transform: capitalize;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 300;
 }
 

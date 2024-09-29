@@ -13,7 +13,8 @@ footer{
 }
 
 .footer-content .logo{
-    height: 160px;
+    width: 250px;
+    align-self: center;
 }
 
 .footer-ul-container{
