@@ -27,7 +27,7 @@ const createNav = () => {
             <li class="link-item"><a href="search.html" class="link">kids</a></li>
             <li class="link-item"><a href="search.html" class="link">accessories</a></li>
         </ul>
-        <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu nope" id="mobile-menu">
             <ul class="mobile-links">
                 <span class ="welcome-mov nope"id="welcome-user">Hi , User</span>
                 <button class="n-button logout-mov nope" id="logout-button">Logout</button>

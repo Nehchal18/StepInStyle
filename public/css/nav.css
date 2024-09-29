@@ -132,9 +132,9 @@
     margin-top: 15px;
 }
 
-/* .mobile-menu {
+.mobile-menu {
     display: none;
-} */
+}
 
 @media screen and (max-width: 790px){
 
@@ -193,7 +193,7 @@
     }
     .mobile-menu ul li{
         /* margin: 10px 0; */
-        
+
         list-style: none;
     }
 
