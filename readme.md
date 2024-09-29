@@ -10,11 +10,25 @@ StepInStyle is a modern e-commerce website focused on providing a seamless shopp
 - **Responsive Design**: Optimized for both desktop and mobile devices.
 - **User-Friendly Interface**: Intuitive navigation for a smooth shopping experience.
 
+## Responsiveness
+
+<div align="center">
+  <a href="https://ui.dev/amiresponsive?url=https://step-in-style-chi.vercel.app/" target="_blank">
+    <img src="public/img/Responsive.jpeg" alt="Responsive design demonstration" />
+  </a>
+</div>
+
 ## Technologies Used
 
 - **HTML**: Structure of the web pages.
 - **CSS**: Styling the website for an appealing look.
 - **JavaScript**: Adding interactivity and dynamic features.
+
+
+## Prerequisites:
+- Make sure you have [Node.js](https://nodejs.org/en/) installed.
+- A GitHub account to clone the repository.
+- (Optional) A text editor like [VS Code]
 
 ## Installation
 
@@ -33,6 +47,24 @@ StepInStyle is a modern e-commerce website focused on providing a seamless shopp
 - Visit the homepage to view featured products.
 - Use the navigation bar to explore different categories.
 - Click on items to view details and add them to your cart.
+
+## Local Storage Schema
+
+The application uses local storage to manage user data and transactions. The schema is structured as follows:
+
+```bash
+Local Storage/
+├── currentUser                # Stores the username of the currently logged-in user.
+├── currentProduct             # Stores the product details of the currently viewed item.
+├── Users                      # An array of user objects.
+│   ├── username               # Unique username for the user (string).
+│   │   ├── email              # User's email address (string).
+│   │   ├── password           # User's password (string).
+│   │   ├── number             # Transaction amount (number).
+│   │   ├── cart               # Array of product objects in the user's cart.
+│   │   │   ├── id             # Unique product ID (number).
+│   │   │   ├── quantity       # Quantity of the product in the cart (number).
+```
 
 ## Contributing
 
